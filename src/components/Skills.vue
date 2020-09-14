@@ -1,7 +1,7 @@
 <template>
   <div class="skills-container">
-    <transition name="trasitionSuperior">
-      <div v-if="titulo" class="titulo">Skills</div>
+    <transition name="trasitionSuperior" appear>
+      <div class="titulo">Skills</div>
     </transition>
     <div class="skills-section">
       <div>
@@ -30,6 +30,7 @@
     <div class="footer" mode="out-in">
       <q-separator key="1" class="separator-footer" dark />
       <div
+        class="text-footer"
         key="2"
       >© 2020 Paulo Frare | Desenvolvedor Front-end & UI/UX Designer | Todos os diretos reservados</div>
     </div>
@@ -40,7 +41,6 @@
 export default {
   data() {
     return {
-      titulo: false,
       subtitulo: false,
       text1: false,
       text2: false,
@@ -54,32 +54,29 @@ export default {
   methods: {},
   created() {
     setTimeout(() => {
-      this.titulo = true;
+      this.subtitulo = true;
     }, 500);
     setTimeout(() => {
-      this.subtitulo = true;
-    }, 1000);
-    setTimeout(() => {
       this.text1 = true;
-    }, 1500);
+    }, 800);
     setTimeout(() => {
       this.text2 = true;
-    }, 2000);
+    }, 1100);
     setTimeout(() => {
       this.text3 = true;
-    }, 2500);
+    }, 1400);
     setTimeout(() => {
       this.text4 = true;
-    }, 3000);
+    }, 1700);
     setTimeout(() => {
       this.text5 = true;
-    }, 3500);
+    }, 2000);
     setTimeout(() => {
       this.text6 = true;
-    }, 4000);
+    }, 2300);
     setTimeout(() => {
       this.footer = true;
-    }, 4500);
+    }, 2600);
   },
 };
 </script>
@@ -90,9 +87,8 @@ export default {
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
-  margin-top: 64px;
-  margin-bottom: 80px;
-  min-height: 425px;
+  margin-top: 100px;
+  margin-bottom: 150px;
 }
 
 .realce {
@@ -214,8 +210,36 @@ export default {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 20px;
   position: fixed;
-  bottom: 0;
+  bottom: 00;
+  z-index: 1000;
+  background-color: #252525;
+  padding: 20px;
+}
+
+.text-footer {
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .skills-section {
+    flex-direction: column;
+  }
+  .skill-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    margin-right: 15px;
+    margin-bottom: 50px;
+  }
+  .skill-ux {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15px;
+    margin-bottom: 50px;
+  }
 }
 </style>

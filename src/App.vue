@@ -28,17 +28,7 @@ export default {
 body {
   font-family: "Roboto Slab", serif;
   background-color: #252525;
-}
-.container {
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.container-claro {
-  padding: 20px;
-
-  /* margin-top: 1px; */
-  /* margin: 0 auto; */
+  letter-spacing: 1px;
 }
 
 ul {

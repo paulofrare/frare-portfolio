@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="contato-container">
-      <transition name="trasitionSuperior">
-        <div v-if="contato" class="contato">Contato</div>
+      <transition name="trasitionSuperior" appear>
+        <div class="contato">Contato</div>
       </transition>
       <transition name="trasitionSuperior">
         <div v-if="emailLabel" class="email-label">Envie um e-mail para</div>
@@ -15,18 +15,43 @@
       </transition>
       <transition name="trasitionSuperior">
         <div v-if="img" class="redes">
-          <img class="redes-item" src="../assets/git.png" alt="Github" />
-          <img class="redes-item" src="../assets/linkedin.png" alt="Linkedin" />
-          <img class="redes-item" src="../assets/insta.png" alt="Intagram" />
-          <img class="redes-item" src="../assets/face.png" alt="Facebook" />
-          <img class="redes-item" src="../assets/whatsapp.png" alt="Whatsapp" />
-          <img class="redes-item" src="../assets/telegram.png" alt="Telegram" />
+          <q-icon
+            @click="redirect('https://github.com/paulofrare')"
+            class="redes-item"
+            size="50px"
+            name="fab fa-github-square"
+          />
+          <q-icon
+            @click="redirect('https://www.linkedin.com/in/paulo-frare/')"
+            class="redes-item"
+            size="50px"
+            name="fab fa-linkedin"
+          />
+          <q-icon
+            @click="redirect('https://www.instagram.com/paulofrare/')"
+            class="redes-item"
+            size="50px"
+            name="fab fa-instagram-square"
+          />
+          <q-icon
+            @click="redirect('https://www.facebook.com/paulofrare/')"
+            class="redes-item"
+            size="50px"
+            name="fab fa-facebook-square"
+          />
+          <q-icon
+            @click="redirect('https://api.whatsapp.com/send?phone=5553991258748')"
+            class="redes-item"
+            size="50px"
+            name="fab fa-whatsapp-square"
+          />
         </div>
       </transition>
       <div class="footer" mode="out-in">
         <q-separator key="1" class="separator-footer" dark />
         <div
           key="2"
+          class="text-footer"
         >© 2020 Paulo Frare | Desenvolvedor Front-end & UI/UX Designer | Todos os diretos reservados</div>
       </div>
     </div>
@@ -37,29 +62,30 @@
 export default {
   data() {
     return {
-      contato: false,
       emailLabel: false,
       email: false,
       redesLabel: false,
       img: false,
     };
   },
+  methods: {
+    redirect(url) {
+      window.open(url);
+    },
+  },
   created() {
     setTimeout(() => {
-      this.contato = true;
+      this.emailLabel = true;
     }, 500);
     setTimeout(() => {
-      this.emailLabel = true;
+      this.email = true;
     }, 1000);
     setTimeout(() => {
-      this.email = true;
+      this.redesLabel = true;
     }, 1500);
     setTimeout(() => {
-      this.redesLabel = true;
-    }, 2000);
-    setTimeout(() => {
       this.img = true;
-    }, 2500);
+    }, 2000);
   },
 };
 </script>
@@ -73,6 +99,7 @@ export default {
   align-items: center;
   max-width: 1000px;
   margin: 0 auto;
+  margin-top: 100px;
 }
 
 .contato {
@@ -83,8 +110,11 @@ export default {
   font-size: 24px;
 }
 .email {
+  color: #3aadf5;
   font-size: 48px;
   margin-bottom: 70px;
+  font-style: italic;
+  font-weight: 200;
 }
 .redes-label {
   font-size: 24px;
@@ -98,6 +128,11 @@ export default {
 .redes-item {
   margin: 10px;
   max-width: 50px;
+  cursor: pointer;
+}
+
+.redes-item:hover {
+  color: #3aadf5;
 }
 
 .separator-footer {
@@ -112,6 +147,10 @@ export default {
   margin: 20px;
   position: fixed;
   bottom: 0;
+}
+
+.text-footer {
+  text-align: center;
 }
 
 .trasitionSuperior-enter,
@@ -139,5 +178,23 @@ export default {
 .email,
 .redes-label {
   animation: slide 1s;
+}
+
+@media only screen and (max-width: 600px) {
+  .email {
+    font-size: 24px;
+  }
+
+  .email-label {
+    font-size: 16px;
+  }
+
+  .redes-label {
+    font-size: 16px;
+  }
+
+  .contato {
+    font-size: 32px;
+  }
 }
 </style>

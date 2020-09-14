@@ -60,6 +60,7 @@ export default {
   line-height: 1.2;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .titulo {
@@ -126,12 +127,24 @@ export default {
   display: block;
   width: 100%;
   position: fixed;
-  height: 100px;
+  height: 200px;
   bottom: 0px;
   background-color: #1e1e1f;
   -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0);
   clip-path: polygon(0 100%, 100% 100%, 100% 0);
   z-index: -1000;
   animation: slideInferior 1s;
+}
+
+@media only screen and (max-width: 600px) {
+  .titulo {
+    font-size: 3rem;
+  }
+  .titulo-menor {
+    font-size: 2.5rem;
+  }
+  .text {
+    font-size: 1.5rem;
+  }
 }
 </style>
