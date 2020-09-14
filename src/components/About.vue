@@ -17,7 +17,7 @@
                 class="bold italic"
               >Rio Grande</span> (não o estado, a cidade mesmo).
             </p>
-            <p>Sou um grande curioso sobre tudo no mundo (ou quase tudo, não gosto de fofoca), e alem de faculdade e trabalho, divido meu tempo em assistir meu futebol, ler um bom livro de ficção cientifica, uma corridinha diária (ou não tãão diária assim, mas me esforço), e aprecio um bom café e uma cerva bem gelada.</p>
+            <p>Sou um grande curioso sobre tudo no mundo (ou quase tudo, não gosto de fofoca), e além de faculdade e trabalho, divido meu tempo em assistir meu futebol, ler um bom livro de ficção cientifica, uma corridinha diária (ou não tãão diária assim, mas me esforço), e aprecio um bom café e uma cerva bem gelada.</p>
           </div>
         </transition>
       </div>
@@ -28,10 +28,10 @@
         <transition name="trasitionSuperior">
           <div v-if="texto2" class="about-section-texto">
             <p>
-              Começei a codar tem 2 anos, em 2018 começei faculdade de
+              Começei a codar tem 2 anos. Em 2018 iniciei faculdade de
               <span
                 class="italic bold"
-              >Analise e Desenvolvilmento de Sistemas</span> e em 2019 larguei meu antigo emprego para estagiar como desenvolvedor.
+              >Analise e Desenvolvilmento de Sistemas, a qual ainda estou cursando</span> e em 2019 larguei meu antigo emprego para estagiar como desenvolvedor.
             </p>
             <p>
               Hoje sou
@@ -73,14 +73,14 @@
               Em 2019, iniciei minha carreira com
               <span class="bold italic">desenvolvimento</span> na
               <span class="realce italic">Vetorial Internet</span>, uma empresa provedora de Internet situada em
-              <span class="bold italic">Rio Grande</span>. Comecei como estagiario e 5 meses depois passei a desenvolvedor
+              <span class="bold italic">Rio Grande</span>. Comecei como estagiário e 5 meses depois passei a desenvolvedor
               <span
                 class="bold italic"
               >fron-end</span>, ocupação em que estou atualmente.
             </p>
             <p>
               Na Vetorial, trabalho na
-              <span class="bold italic">matutenção</span> e
+              <span class="bold italic">manutenção</span> e
               <span class="bold italic">desenvolvimento</span> de alguns sistemas internos, sendo eles três sistemas web, um site institucional e três aplicativos andróid.
               Nesses sistemas, utilizo tecnologias como
               <span
