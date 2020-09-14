@@ -31,7 +31,7 @@
               Começei a codar tem 2 anos. Em 2018 iniciei faculdade de
               <span
                 class="italic bold"
-              >Analise e Desenvolvilmento de Sistemas, a qual ainda estou cursando</span> e em 2019 larguei meu antigo emprego para estagiar como desenvolvedor.
+              >Analise e Desenvolvilmento de Sistemas</span>, a qual ainda estou cursando, e em 2019 larguei meu antigo emprego para estagiar como desenvolvedor.
             </p>
             <p>
               Hoje sou
@@ -47,7 +47,7 @@
               <span class="realce italic">VueJS</span>, sendo essas as principais ferramentas que utilizo hoje.
             </p>
             <p>
-              Além do JS, ao qual me dedico em ser uma especialidede, me aventuro também na carreira de
+              Além do JS, ao qual me dedico em ser uma especialidade, me aventuro também na carreira de
               <span
                 class="realce italic"
               >UX/UI Design</span>, estudando os
