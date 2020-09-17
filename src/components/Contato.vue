@@ -47,13 +47,15 @@
           />
         </div>
       </transition>
-      <div class="footer" mode="out-in">
-        <q-separator key="1" class="separator-footer" dark />
-        <div
-          key="2"
-          class="text-footer"
-        >© 2020 Paulo Frare | Desenvolvedor Front-end & UI/UX Designer | Todos os diretos reservados</div>
-      </div>
+      <transition mode="out-in">
+        <div v-if="footer" class="footer">
+          <q-separator key="1" class="separator-footer" dark />
+          <div
+            class="text-footer"
+            key="2"
+          >© 2020 Paulo Frare | Desenvolvedor Front-end & UI/UX Designer | Todos os diretos reservados</div>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -66,6 +68,7 @@ export default {
       email: false,
       redesLabel: false,
       img: false,
+      footer: false,
     };
   },
   methods: {
@@ -86,6 +89,9 @@ export default {
     setTimeout(() => {
       this.img = true;
     }, 2000);
+    setTimeout(() => {
+      this.footer = true;
+    }, 2300);
   },
 };
 </script>
@@ -195,6 +201,17 @@ export default {
 
   .contato {
     font-size: 32px;
+  }
+
+  .footer {
+    z-index: 1000;
+    background-color: #252525;
+    padding: 10px;
+    position: relative;
+  }
+
+  .redes-item {
+    margin: 2px;
   }
 }
 </style>

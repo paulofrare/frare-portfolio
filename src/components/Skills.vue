@@ -27,13 +27,15 @@
         </transition-group>
       </div>
     </div>
-    <div class="footer" mode="out-in">
-      <q-separator key="1" class="separator-footer" dark />
-      <div
-        class="text-footer"
-        key="2"
-      >© 2020 Paulo Frare | Desenvolvedor Front-end & UI/UX Designer | Todos os diretos reservados</div>
-    </div>
+    <transition mode="out-in">
+      <div v-if="footer" class="footer">
+        <q-separator key="1" class="separator-footer" dark />
+        <div
+          class="text-footer"
+          key="2"
+        >© 2020 Paulo Frare | Desenvolvedor Front-end & UI/UX Designer | Todos os diretos reservados</div>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -132,6 +134,16 @@ export default {
   font-size: 24px;
 }
 
+.v-enter,
+.v-leave-to {
+  opacity: 0;
+}
+
+.v-enter-active,
+.v-leave-to {
+  transition: opacity 1s;
+}
+
 .trasitionSuperior-enter,
 .trasitionSuperior-leave-to {
   opacity: 0;
@@ -211,7 +223,7 @@ export default {
   align-items: center;
   width: 100%;
   position: fixed;
-  bottom: 00;
+  bottom: 0;
   z-index: 1000;
   background-color: #252525;
   padding: 20px;
@@ -222,15 +234,29 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
+  .titulo {
+    font-size: 42px;
+  }
   .skills-section {
     flex-direction: column;
   }
+
+  .subtituloEsquerdo,
+  .subtitulo {
+    font-size: 32px;
+  }
+
+  .textEsquerdo,
+  .text {
+    font-size: 20px;
+  }
+
   .skill-front {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 300px;
-    margin-right: 15px;
+    margin-right: 0;
     margin-bottom: 50px;
   }
   .skill-ux {
@@ -238,8 +264,20 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 15px;
+    margin-left: 0;
     margin-bottom: 50px;
+  }
+
+  .footer {
+    z-index: 1000;
+    background-color: #252525;
+    padding: 10px;
+    position: relative;
+  }
+
+  .skills-container {
+    margin-top: 100px;
+    margin-bottom: 0px;
   }
 }
 </style>

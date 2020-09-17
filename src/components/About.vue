@@ -93,13 +93,15 @@
           </div>
         </transition>
       </div>
-      <transition-group v-if="footer" class="footer" mode="out-in">
-        <q-separator key="1" class="separator-footer" dark />
-        <div
-          class="text-footer"
-          key="2"
-        >© 2020 Paulo Frare | Desenvolvedor Front-end & UI/UX Designer | Todos os diretos reservados</div>
-      </transition-group>
+      <transition mode="out-in">
+        <div v-if="footer" class="footer">
+          <q-separator key="1" class="separator-footer" dark />
+          <div
+            class="text-footer"
+            key="2"
+          >© 2020 Paulo Frare | Desenvolvedor Front-end & UI/UX Designer | Todos os diretos reservados</div>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -164,7 +166,7 @@ export default {
 
 .about-section {
   margin-top: 38px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   max-width: 1000px;
   display: flex;
   flex-direction: column;
@@ -247,5 +249,15 @@ export default {
 
 .text-footer {
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .frase {
+    font-size: 2rem;
+    margin-bottom: 2px;
+  }
+  .about-section-titulo {
+    font-size: 1.5rem;
+  }
 }
 </style>

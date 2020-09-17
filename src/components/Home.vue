@@ -137,6 +137,9 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
+  .home-container {
+    margin-top: 120px !important;
+  }
   .titulo {
     font-size: 3rem;
   }
